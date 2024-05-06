@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "0e72d8b4-ba82-425f-89c4-038057c7feae",
+		"name": "ASO Pizzeria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15871363"
+	},
+	"item": [
+		{
+			"name": "TipoUsuarioGet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/tipo-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"tipo-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario- Upsert - Insertar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"PRU\",\r\n     \"descripcion\":\"Prueba\"   \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/tipo-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"tipo-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tipo Usuario Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":\"PRU\",\r\n\"descripcion\":\"Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/tipo-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"tipo-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario finById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/tipo-usuario/PIZ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"tipo-usuario",
+						"PIZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\":{\r\n        \"correo\":\"lucianojimenez662@gmail.com\",\r\n        \"contrasena\":\"lucky\",\r\n        \"primerNombre\":\"Jonathan\",\r\n        \"primerApellido\":null,\r\n        \"segundoApellido\":\"Jimenez\",\r\n        \"celular\":\"5538591412\",\r\n        \"tipoUsuario\": {\r\n        \"id\":\"CLI\",\r\n        \"description\":\"Cliente\"\r\n    }\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/register/singup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"register",
+						"singup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
